@@ -3,7 +3,6 @@ Consider telephone book database of N clients. Make use of a hash table implemen
 Make use of two collision handling techniques and compare them using number of comparisons required to find aset of telephone numbers
 */
 
-
 #include<iostream>
 using namespace std;
 #define size (long int)10
