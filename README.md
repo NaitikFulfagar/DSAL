@@ -1,2 +1,2 @@
 # DSAL
-Not Reposibility of Repositiory Owner for any Unethical activity
+Not Reposibility of Repository Owner for any Unethical activity
