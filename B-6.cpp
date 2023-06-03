@@ -18,6 +18,11 @@ class node
     int data;
     node* left;
     node* right;
+    node()
+    {
+        left=NULL;
+        right=NULL;
+    }
 };
 
 
@@ -48,8 +53,6 @@ void bst::createtree()
     node* newnode=new node;
     cout<<"Enter Number : ";
     cin>>newnode->data;
-    newnode->left=NULL;
-    newnode->right=NULL;
     if (root==NULL)
     {
         root=newnode;
