@@ -30,7 +30,6 @@ class Set
     Set nunion(Set);
     Set ndiff(Set);
     void subset(Set);
-
 };
 
 void Set::insert()
@@ -140,23 +139,15 @@ Set Set::ndiff(Set B)
 
 void Set::subset(Set B)
 {
-    bool flag=true;
     for(int i=0;i<B.cnt;i++)
     {
-        if(find(B.a[i]))
+        if(!find(B.a[i]))
         {
-            flag=false;
-            break;
+            cout<<"\nFalse";
+            return;
         }
     }
-    if (flag==false)
-    {
-        cout<<"\nFalse"; 
-    }
-    else
-    {
-        cout<<"\nTrue";
-    }
+    cout<<"\nTrue";
 }
 
 int main()
@@ -222,11 +213,11 @@ int main()
                 break;
                 
             case 9:
-                A.subset(B);
+                B.subset(A);
                 break;
                 
             case 10:
-                B.subset(A);
+                A.subset(B);
                 break;
             
             default:
