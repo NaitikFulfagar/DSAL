@@ -18,7 +18,6 @@ class node
             right=left=NULL;
             lb=rb=0;
         }
-
 };
 
 class TBT
@@ -32,7 +31,6 @@ class TBT
     }
     void createTBT();
     void Display();
-    
 };
 
 void TBT::createTBT()
@@ -98,7 +96,6 @@ void TBT::createTBT()
                 cout<<"\n Data is already exist";
                 break;
             }
-            
         }
     }
 }
@@ -145,14 +142,36 @@ void TBT::Display()
 
 int main()
 {
-    TBT T;
-    for (int i = 0; i < 5; i++)
-    {
-        T.createTBT();
-    }
-    
-    T.Display();
- 
+    TBT o;
+    int ch;
+    do
+        {
+            cout<<"\n***Menu***";
+            cout<<"\n1.Create Nodes";
+            cout<<"\n2.Display";
+            cout<<"\n3.Exit";
+            cout<<"\nEnter Choice : ";
+            cin>>ch;
+            switch(ch)
+            {
+                case 1:
+                    cout<<"\nEnter 5 Numbers :-\n";
+                    for(int i=0;i<5;i++)
+                    {
+                        o.createTBT();
+                    }
+                    break;
+
+                case 2:
+                    o.Display();     
+                    break;
+                
+                default:
+                    cout<<"\nEnter Vaild opition!";
+                    break;    
+            }
+    }while(ch!=3);
+
     return 0;
 }
 
