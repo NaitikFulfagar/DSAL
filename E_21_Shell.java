@@ -24,15 +24,15 @@ public class E_21_Shell{
         }
     }
     public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
+        Scanner sc = new Scanner(System.in);
 
         System.out.println("Enter number of elements: ");
-        int n = scanner.nextInt();
+        int n = sc.nextInt();
 
         int[] arr = new int[n];
         System.out.println("Enter elements: ");
         for(int i=0; i!=n; i++){
-            arr[i] = scanner.nextInt();
+            arr[i] = sc.nextInt();
         }
 
         shellSort(arr);
@@ -42,7 +42,7 @@ public class E_21_Shell{
             System.out.println(arr[i] + "  ");
         }
 
-        scanner.close();
-        
+        sc.close();
+
     }
 }
