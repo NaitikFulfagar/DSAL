@@ -8,9 +8,9 @@ with a minimum total cost. Solve the problem by suggesting appropriate data stru
 using namespace std;
 class snode
 {
-public:        // data structure for sparse matrix.
-char u1,u2;
-int wt;
+    public:       
+    char u1,u2;
+    int wt;
 };
 
 class test
@@ -30,7 +30,7 @@ class test
     void kruskals();
     void dispmst();
 };
-// Function to Read input graph.
+
 void test::inputsparse()
 {
     cout<<"ENTER NO OF VERTICES: ";
@@ -55,7 +55,7 @@ void test::displaysparse()
         cout<<arr[i].u1<<"\t\t"<<arr[i].u2<<"\t\t"<<arr[i].wt<<endl;
     }
 }
-//Sort the given edges of the graph using bubble sort
+
 void test::bsort()
 {
 snode temp;
@@ -72,7 +72,7 @@ snode temp;
         }
     }
 }
-// Function to Display result
+
 void test::dispmst()
 {
     cout<<"Result:\n1ST VERTEX:\t2ND VERTEX:\tWEIGHT: \n";
@@ -82,7 +82,6 @@ void test::dispmst()
     }
 }
 
-// Function to find minimum spanning tree.
 void test::kruskals()
 {
     int cnt=0;
@@ -99,16 +98,15 @@ void test::kruskals()
             flag2=0;
             for(int j=0;j<m;j++)
             {
-                if((arr[i].u1==res[j].u1 || arr[i].u1==res[j].u2 ) && flag1==0)
+                if (flag1==0 && (arr[i].u1==res[j].u1 || arr[i].u1==res[j].u2 ) )
                 {
                     flag1++;
                 }
-                if((arr[i].u2==res[j].u1 || arr[i].u2==res[j].u2 ) && flag2==0)
+                if( flag2==0 && (arr[i].u2==res[j].u1 || arr[i].u2==res[j].u2 ))
                 {
                     flag2++;
                 }
             }
-
             if(flag1!=1  ^ flag2 !=1) // ^ xor operation.
             {
                     res[m++]=arr[i];
