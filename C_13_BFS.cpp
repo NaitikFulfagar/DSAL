@@ -95,9 +95,10 @@ void graph::BFS()
 		{
 			if(a[curr][c]==1)
 			{
-				q.insert(c);
+				
 				if(search(c)==0)
 				{
+					q.insert(c);
 					v[Rcnt++]=c;
 				}
 			}
