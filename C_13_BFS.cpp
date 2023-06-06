@@ -17,7 +17,7 @@ class Queue
 	{
 		if(r<=20)
 		{
-			a[r++]=key;
+			a[++r]=key;
 		}
 		else
 		{
@@ -29,9 +29,9 @@ class Queue
 	{
 		if(f!=r)
 		{
-			return (a[f++]);
+			return (a[++f]);
 		}
-		else
+		else if (f==20)
 		{
 			cout<<"Queue is Empty!";
 		}
