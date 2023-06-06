@@ -43,15 +43,15 @@ class graph
 	int a[10][10],vcnt,Rcnt;
 	int v[20];
 	public:
-			graph()
-			{
-					Rcnt = 0;
-					vcnt=0;
-			}
-			void read_adjacency();
-			void display_adjacency();
-			void BFS();
-			int search(int);
+		graph()
+		{
+				Rcnt = 0;
+				vcnt=0;
+		}
+		void read_adjacency();
+		void display_adjacency();
+		void BFS();
+		int search(int);
 };
 
 void graph::read_adjacency()
@@ -61,10 +61,10 @@ void graph::read_adjacency()
 	cout<<"\nStart Entering Elements : ";
 	for(int i=1;i<=vcnt;i++)
 	{
-			for(int j=1;j<=vcnt;j++)
-			{
-					cin>>a[i][j];
-			}
+		for(int j=1;j<=vcnt;j++)
+		{
+			cin>>a[i][j];
+		}
 	}
 }
 
@@ -72,11 +72,11 @@ void graph::display_adjacency()
 {
 	for(int i=1;i<=vcnt;i++)
 	{
-			for(int j=1;j<=vcnt;j++)
-			{
-					cout<<a[i][j]<<"  ";
-			}
-			cout<<"\n";
+		for(int j=1;j<=vcnt;j++)
+		{
+			cout<<a[i][j]<<"  ";
+		}
+		cout<<"\n";
 	}
 }
 
@@ -90,18 +90,18 @@ void graph::BFS()
 	q.insert(sv);
 	for(int i=1; i<=vcnt; i++)
 	{
-			curr=q.Delete();
-			for(int c=1;c<=vcnt;c++)
+		curr=q.Delete();
+		for(int c=1;c<=vcnt;c++)
+		{
+			if(a[curr][c]==1)
 			{
-					if(a[curr][c]==1)
-					{
-						q.insert(c);
-						if(search(c)==0)
-						{
-								v[Rcnt++]=c;
-						}
-					}
+				q.insert(c);
+				if(search(c)==0)
+				{
+					v[Rcnt++]=c;
+				}
 			}
+		}
 	}
 	cout<<"BFS=";
 	for(int i=0;i<Rcnt;i++)
@@ -115,14 +115,14 @@ int graph::search(int key)
 	int i;
 	for(i = 0; i<Rcnt; i++)
 	{
-			if(v[i] == key)
-			{
-					return(1);
-			}
+		if(v[i] == key)
+		{
+			return(1);
+		}
 	}
 	if(i == Rcnt )
 	{
-			return(0);
+		return(0);
 	}
 }
 
