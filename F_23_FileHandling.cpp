@@ -102,7 +102,7 @@ int main()
         {
             case 1:
             	cout<<"\nEnter Record of 5 Students :-\n";
-            	for(int i=0;i<3;i++)
+            	for(int i=0;i<5;i++)
             	{
                 	o.create();
                 }
