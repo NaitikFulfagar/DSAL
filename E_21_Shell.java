@@ -31,7 +31,8 @@ public class E_21_Shell{
 
         int[] arr = new int[n];
         System.out.println("Enter elements: ");
-        for(int i=0; i!=n; i++){
+        for(int i=0; i!=n; i++)
+        {
             arr[i] = sc.nextInt();
         }
 
@@ -39,10 +40,11 @@ public class E_21_Shell{
 
         System.out.println("Sorted List: ");
         for(int i=0;i<n;i++){
-            System.out.println(arr[i] + "  ");
+            System.out.print(arr[i] + "  ");
         }
 
         sc.close();
 
     }
 }
+//Coded By Naitik Fulfagar
